@@ -1,0 +1,11 @@
+Model Information:
+* title:	5- Dive Suit
+* source:	https://sketchfab.com/3d-models/5-dive-suit-ffd326a80a5442dd9138bb1a2b859aa1
+* author:	CVallance (https://sketchfab.com/cvallance01)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "5- Dive Suit" (https://sketchfab.com/3d-models/5-dive-suit-ffd326a80a5442dd9138bb1a2b859aa1) by CVallance (https://sketchfab.com/cvallance01) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
