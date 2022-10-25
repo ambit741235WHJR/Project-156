@@ -3,14 +3,16 @@
   <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
 
-    <!-- COMPONENT FILES-->
-    <script src="Fish.js"></script>
-    <script src="Treasure.js"></script>
-    <script src="Rotation.js"></script>
+    <!--COMPONENT FILES -->
+    <script src="fish.js"></script>
+    <script src="treasure.js"></script>
+    <script src="rotation.js"></script>
+    <script src="game.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene physics="debug:false">
       <!---Assets-->
       <a-a-assets>
         <a-asset-item id="island" src="assets/island/scene.gltf"></a-asset-item>
@@ -93,6 +95,12 @@
         position="5 0 15"
         rotation="0 90 -20"
         diver-rotation-reader
+        body="type: dynamic; mass: 0; shape: none;"
+        shape="shape: cylinder;
+          height: 100;
+          radiusTop: 20;
+          radiusBottom: 20;
+          offset:50 100 -50"
       >
         <a-sphere
           id="bubble1"
