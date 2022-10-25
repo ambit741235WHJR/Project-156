@@ -3,13 +3,15 @@
   <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
-      
+
+    <!-- COMPONENT FILES-->
+    <script src="Fish.js"></script>
+    <script src="Treasure.js"></script>
     <script src="Rotation.js"></script>
-    
   </head>
   <body>
-    <a-scene >
-      <!---Asset Management-->
+    <a-scene>
+      <!---Assets-->
       <a-a-assets>
         <a-asset-item id="island" src="assets/island/scene.gltf"></a-asset-item>
 
@@ -21,14 +23,13 @@
           id="xyz"
           src="assets/coral_fish/scene.gltf"
         ></a-asset-item>
-        <a-asset-item id="turtle" src="assets/turtle/scene.gltf"></a-asset-item>        
+        <a-asset-item id="turtle" src="assets/turtle/scene.gltf"></a-asset-item>
+        <a-asset-item id="trout" src="assets/trout/scene.gltf"></a-asset-item>
         <a-asset-item
           id="scuba_diver"
           src="assets/5-_dive_suit/scene.gltf"
         ></a-asset-item>
       </a-a-assets>
-
-      <a-camera id="camera" position="0 10 25" look-controls wasd-controls-enabled="false"></a-camera>
 
       <!-- Sky -->
       <a-sky
@@ -69,7 +70,13 @@
           position="-15 -30 -40"
           rotation="0 90 0"
         ></a-entity>
-       
+
+        <!--Fish Entity-->
+        <a-entity position="0 0 0" id="fishModels" fish> </a-entity>
+
+        <!--Treasure Entity-->
+        <a-entity position="0 0 0" id="treasureCoins" coins> </a-entity>
+
         <!--Turtule-->
         <a-entity
           gltf-model="#turtle"
@@ -84,7 +91,7 @@
         gltf-model="#scuba_diver"
         scale="0.1 0.1 0.1"
         position="5 0 15"
-        rotation="0 90 -20"        
+        rotation="0 90 -20"
         diver-rotation-reader
       >
         <a-sphere
@@ -97,6 +104,13 @@
       </a-entity>
 
       <a-cylinder color="#00009e" radius="100" opacity="0.2"></a-cylinder>
+
+      <!-- CAMERA -->
+      <a-entity
+        camera="active: true"
+        look-controls
+        position="0 10 25"
+      ></a-entity>
     </a-scene>
   </body>
 </html>
