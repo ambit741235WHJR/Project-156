@@ -75,7 +75,7 @@ AFRAME.registerComponent("game-play", {
     },
 
     gameOver: function() {
-      var diverEl = document.querySelector("#diver");
+      var diverEl = document.querySelector("#scuba-diver");
       var gameOverEl = document.querySelector("#game-over");
       gameOverEl.setAttribute("visible", true);
       diverEl.setAttribute("dynamic-body", { mass: 1 });
